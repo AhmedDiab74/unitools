@@ -30,7 +30,7 @@ class SearchSection extends StatelessWidget {
           ),
           child: IconButton(
             icon: SvgPicture.asset(
-              "assets/sliders.svg",
+              "assets/images/sliders.svg",
               width: 30,
               height: 30,
             ),

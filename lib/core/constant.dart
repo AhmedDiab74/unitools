@@ -6,52 +6,52 @@ var routes = {};
 List<ItemModel> homeItem = [
   ItemModel(
       faculty: "الحاسبات ومعلومات",
-      image: "assets/it.png",
+      image: "assets/images/it.png",
       title: "IT Lectures",
       subTitle: "Lectures summary for it department",
       university: "Tanta",
       type: "Free"),
   ItemModel(
       faculty: "الحاسبات ومعلومات",
-      image: "assets/CS Section.png",
+      image: "assets/images/CS Section.png",
       title: "CS Lectures",
       subTitle: "Lectures summary for cs department",
       university: "Tanta",
       type: "Free"),
   ItemModel(
       faculty: "صيدلة",
-      image: "assets/pharma.png",
+      image: "assets/images/pharma.png",
       title: "Pharma Summary",
       subTitle: "Farma Sections summary.",
       university: "Monofia",
       type: "Free"),
   ItemModel(
       faculty: "هندسة",
-      image: "assets/5rasana.png",
+      image: "assets/images/5rasana.png",
       title: "سكاشن خرسانة",
       subTitle: "ملخص سكاشن خرسانة 2022/2023",
       university: "Mansoura",
       type: "Free"),
   ItemModel(
-      image: "assets/CSPrgrams.png",
+      image: "assets/images/CSPrgrams.png",
       title: "CS programs'",
       subTitle: "all programs for cs department.",
       university: "CS, Tanta",
       type: "Free"),
   ItemModel(
-      image: "assets/CSPrgrams.png",
+      image: "assets/images/CSPrgrams.png",
       title: "CS programs'",
       subTitle: "all programs for cs department.",
       university: "CS, Tanta",
       type: "Free"),
   ItemModel(
-      image: "assets/IT Programs.png",
+      image: "assets/images/IT Programs.png",
       title: "IT programs'",
       subTitle: "all programs for it department.",
       university: "Tanta",
       type: "Free"),
   ItemModel(
-      image: "assets/IT Programs.png",
+      image: "assets/images/IT Programs.png",
       title: "IT programs'",
       subTitle: "all programs for it department.",
       university: "CS, Tanta",
@@ -60,7 +60,7 @@ List<ItemModel> homeItem = [
 
 List<ItemModel> programsItem = [
   ItemModel(
-      image: "assets/visual studio.png",
+      image: "assets/images/visual studio.png",
       title: "Visual studio",
       subTitle: "visual studio program",
       university: "IT&CS ,Tanta",
@@ -68,19 +68,19 @@ List<ItemModel> programsItem = [
 ];
 List<ItemModel> sectionsItem = [
   ItemModel(
-      image: "assets/ITSection.png",
+      image: "assets/images/ITSection.png",
       title: "IT Sections",
       subTitle: "Sections summary for it department",
       university: "IT, Tanta",
       type: "Free"),
   ItemModel(
-      image: "assets/CSSection.png",
+      image: "assets/images/CSSection.png",
       title: "CS Sections",
       subTitle: "Sections summary for cs department",
       university: "CS, Tanta",
       type: "Free"),
   ItemModel(
-    image: "assets/5rasana.png",
+    image: "assets/images/5rasana.png",
     title: "سكاشن خرسانة",
     subTitle: "ملخص سكاشن خرسانة 2022/2023",
     university: "Mansoura",
@@ -88,7 +88,7 @@ List<ItemModel> sectionsItem = [
     faculty: "هندسة",
   ),
   ItemModel(
-    image: "assets/pharma.png",
+    image: "assets/images/pharma.png",
     title: "Pharma Summary",
     subTitle: "Farma Sections summary.",
     university: "Monofia",
@@ -96,13 +96,13 @@ List<ItemModel> sectionsItem = [
     faculty: "صيدلة",
   ),
   ItemModel(
-      image: "assets/AI Sec.png",
+      image: "assets/images/AI Sec.png",
       title: "AI Sections ",
       subTitle: "Sections summary for AI department",
       university: "AI, Tanta",
       type: "Free"),
   ItemModel(
-    image: "assets/5rasana.png",
+    image: "assets/images/5rasana.png",
     title: "سكاشن خرسانة",
     subTitle: "ملخص سكاشن خرسانة 2022/2023",
     university: "Mansoura",
@@ -110,13 +110,13 @@ List<ItemModel> sectionsItem = [
     faculty: "هندسة",
   ),
   ItemModel(
-      image: "assets/CSSection.png",
+      image: "assets/images/CSSection.png",
       title: "CS Sections",
       subTitle: "Sections summary for cs department",
       university: "CS, Tanta",
       type: "Free"),
   ItemModel(
-      image: "assets/IS Sec.png",
+      image: "assets/images/IS Sec.png",
       title: "IS Sections",
       subTitle: "Sections summary for IS department",
       university: "IS, Tanta",
@@ -124,7 +124,7 @@ List<ItemModel> sectionsItem = [
 ];
 List<ItemModel> lecturesItem = [
   ItemModel(
-    image: "assets/it.png",
+    image: "assets/images/it.png",
     title: "IT Lectures",
     subTitle: "Lectures summary for it department",
     university: "Tanta",
@@ -132,7 +132,7 @@ List<ItemModel> lecturesItem = [
     faculty: "حاسبات ومعلومات",
   ),
   ItemModel(
-    image: "assets/CS Section.png",
+    image: "assets/images/CS Section.png",
     title: "CS Lectures",
     subTitle: "Lectures summary for cs department",
     university: "Tanta",
@@ -140,7 +140,7 @@ List<ItemModel> lecturesItem = [
     faculty: "حاسبات ومعلومات",
   ),
   ItemModel(
-    image: "assets/AI Lec.png",
+    image: "assets/images/AI Lec.png",
     title: "AI Lectures",
     subTitle: "Lectures summary for it department",
     university: "Tanta",
@@ -149,10 +149,11 @@ List<ItemModel> lecturesItem = [
   ),
 ];
 
-List<ItemNavigationModel> itemNavigationBar=[
-  ItemNavigationModel(icon: "assets/person.svg", title: "الحساب"),
-  ItemNavigationModel(icon: "assets/advertise.svg", title: "إعلاناتي"),
-  ItemNavigationModel(icon: "assets/add.svg", title: "إضافة"),
-  ItemNavigationModel(icon: "assets/chat.svg", title: "محادثاتي"),
-  ItemNavigationModel(icon: "assets/homepage.svg", title: "الصفحة الرئيسية"),
+List<ItemNavigationModel> itemNavigationBar = [
+  ItemNavigationModel(icon: "assets/images/person.svg", title: "الحساب"),
+  ItemNavigationModel(icon: "assets/images/advertise.svg", title: "إعلاناتي"),
+  ItemNavigationModel(icon: "assets/images/add.svg", title: "إضافة"),
+  ItemNavigationModel(icon: "assets/images/chat.svg", title: "محادثاتي"),
+  ItemNavigationModel(
+      icon: "assets/images/homepage.svg", title: "الصفحة الرئيسية"),
 ];

@@ -43,7 +43,8 @@ class _CustomAppBarState extends State<CustomAppBar> {
                         value: value,
                         child: Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                          child: Text(value, style: const TextStyle(fontSize: 20)),
+                          child:
+                              Text(value, style: const TextStyle(fontSize: 20)),
                         ),
                       );
                     }).toList(),
@@ -57,7 +58,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
           Stack(
             children: [
               SvgPicture.asset(
-                "assets/bell.svg",
+                "assets/images/bell.svg",
                 width: 20,
                 height: 25,
               ),

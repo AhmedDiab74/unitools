@@ -19,7 +19,7 @@ class CustomSearchTextField extends StatelessWidget {
           icon: Opacity(
               opacity: 0.8,
               child: SvgPicture.asset(
-                "assets/searchIcon.svg",
+                "assets/images/searchIcon.svg",
                 width: 20,
                 height: 20,
               ))),
