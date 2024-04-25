@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:svg_flutter/svg.dart';
 import 'package:unitools/core/constant.dart';
 import 'package:unitools/views/add_item_view.dart';
+import 'package:unitools/views/home_page_view.dart';
 import 'package:unitools/widgets/my_favourite_view_body.dart';
 
 class MyFavouriteView extends StatefulWidget {
   const MyFavouriteView({super.key});
-static String routeName = "/MyFavouriteView";
+  static String routeName = "/MyFavouriteView";
 
   @override
   State<MyFavouriteView> createState() => _MyFavouriteViewState();
@@ -15,25 +16,19 @@ static String routeName = "/MyFavouriteView";
 class _MyFavouriteViewState extends State<MyFavouriteView> {
   @override
   Widget build(BuildContext context) {
-    return   Scaffold(
-      bottomNavigationBar:  NavigationBar(
+    return Scaffold(
+      bottomNavigationBar: NavigationBar(
         onDestinationSelected: (value) {
-           if (value == 0) {
-            
-          }
-           else if (value == 1) {
-            
-          }
-          else if (value == 2) {
+          if (value == 0) {
+          } else if (value == 1) {
+          } else if (value == 2) {
             Navigator.pushNamed(context, MyFavouriteView.routeName)
                 .whenComplete(() => setState(() {}));
-          }
-           else if (value == 3) {
+          } else if (value == 3) {
             Navigator.pushNamed(context, AddItemView.routeName);
-          }
-           else if (value == 4) {
-          }
-           else if (value == 5) {
+          } else if (value == 4) {
+          } else if (value == 5) {
+            Navigator.pushNamed(context, HomePage.routeName);
           }
         },
         backgroundColor: Colors.transparent,
