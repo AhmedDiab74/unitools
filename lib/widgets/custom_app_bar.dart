@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:svg_flutter/svg.dart';
-import 'package:unitools/views/my_favourite_view.dart';
 
 class CustomAppBar extends StatefulWidget {
   const CustomAppBar({super.key});

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:unitools/core/constant.dart';
-import 'package:unitools/models/item_model.dart';
-import 'package:unitools/widgets/catergory_item_with_name.dart';
+import 'package:unitools/widgets/catergory_item.dart';
 
 class MyFavouriteGridView extends StatelessWidget {
   const MyFavouriteGridView({
@@ -22,7 +21,7 @@ class MyFavouriteGridView extends StatelessWidget {
         mainAxisSpacing: 12,
       ),
       itemBuilder: (context, index) {
-        return CategoryItemWithName(
+        return CategoryItem(
           itemModel: favouriteItem[index],
         );
       },

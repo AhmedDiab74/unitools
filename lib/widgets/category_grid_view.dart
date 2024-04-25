@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:unitools/models/item_model.dart';
-import 'package:unitools/widgets/catergory_item_with_name.dart';
+import 'package:unitools/widgets/catergory_item.dart';
 
 class CategoryGridViewWithName extends StatelessWidget {
   const CategoryGridViewWithName({
@@ -10,7 +10,7 @@ class CategoryGridViewWithName extends StatelessWidget {
   });
   final List<ItemModel> itemModel;
   final int numberOfTab;
-   @override
+  @override
   Widget build(BuildContext context) {
     List<ItemModel> filteredItems = itemModel.where((item) {
       if (numberOfTab == 0) {
@@ -27,7 +27,6 @@ class CategoryGridViewWithName extends StatelessWidget {
       return false;
     }).toList();
 
-    // Ensure numberOfTab is within the range of 0 to 4
     numberOfTab.clamp(0, 4);
 
     return Expanded(
@@ -43,7 +42,7 @@ class CategoryGridViewWithName extends StatelessWidget {
           mainAxisSpacing: 12,
         ),
         itemBuilder: (context, index) {
-          return CategoryItemWithName(
+          return CategoryItem(
             itemModel: filteredItems[index],
           );
         },

@@ -8,7 +8,6 @@ import 'package:unitools/views/add_item_view.dart';
 import 'package:unitools/views/my_favourite_view.dart';
 import 'package:unitools/views/not_found_view.dart';
 import 'package:unitools/widgets/category_grid_view.dart';
-import 'package:unitools/widgets/category_grid_view_without_name.dart';
 import 'package:unitools/widgets/custom_app_bar.dart';
 import 'package:unitools/widgets/search_section.dart';
 
@@ -37,7 +36,7 @@ class _HomePageBodyState extends State<HomePageBody> {
     return Scaffold(
       bottomNavigationBar: NavigationBar(
         onDestinationSelected: (value) {
-          print(value);
+         
           if (value == 2) {
             Navigator.pushNamed(context, MyFavouriteView.routeName)
                 .whenComplete(() => setState(() {}));

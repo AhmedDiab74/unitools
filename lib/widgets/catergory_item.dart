@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:unitools/core/constant.dart';
 import 'package:unitools/models/item_model.dart';
 
-class CategoryItemWithName extends StatefulWidget {
-  const CategoryItemWithName({
+class CategoryItem extends StatefulWidget {
+  const CategoryItem({
     super.key,
     required this.itemModel,
   });
@@ -11,10 +11,10 @@ class CategoryItemWithName extends StatefulWidget {
   final ItemModel itemModel;
 
   @override
-  State<CategoryItemWithName> createState() => _CategoryItemWithNameState();
+  State<CategoryItem> createState() => _CategoryItemState();
 }
 
-class _CategoryItemWithNameState extends State<CategoryItemWithName> {
+class _CategoryItemState extends State<CategoryItem> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -147,7 +147,5 @@ class _CategoryItemWithNameState extends State<CategoryItemWithName> {
         ),
       ]),
     );
- 
- 
   }
 }
