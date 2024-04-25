@@ -36,12 +36,22 @@ class _HomePageBodyState extends State<HomePageBody> {
     return Scaffold(
       bottomNavigationBar: NavigationBar(
         onDestinationSelected: (value) {
-         
-          if (value == 2) {
+           if (value == 0) {
+            
+          }
+           else if (value == 1) {
+            
+          }
+          else if (value == 2) {
             Navigator.pushNamed(context, MyFavouriteView.routeName)
                 .whenComplete(() => setState(() {}));
-          } else if (value == 2) {
+          }
+           else if (value == 3) {
             Navigator.pushNamed(context, AddItemView.routeName);
+          }
+           else if (value == 4) {
+          }
+           else if (value == 5) {
           }
         },
         backgroundColor: Colors.transparent,
