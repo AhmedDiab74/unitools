@@ -60,6 +60,33 @@ class _CustomAppBarState extends State<CustomAppBar> {
                     }).toList(),
                     onChanged: (String? value) {
                       selectedCity = value!;
+                      if (value == "medicine") {
+                        
+                      } 
+                      else if (value == "Engineering"){
+
+                      } 
+                      else if (value == "Science"){
+
+                      } 
+                      else if (value == "Education"){
+
+                      } 
+                      else if (value == "Commerce"){
+
+                      } 
+                      else if (value == "Literature"){
+
+                      } 
+                      else if (value == "Dentistry"){
+
+                      } 
+                      else if (value == "Pharmacy"){
+
+                      } 
+                      else if (value == "Nursing"){
+
+                      } 
                       setState(() {});
                     })
               ],
