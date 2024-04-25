@@ -1,8 +1,13 @@
+import 'package:flutter/material.dart';
+
 class ItemModel {
-  final String image, title, subTitle, university, type;
+  final String image, title, subTitle, university, type,category;
   final String? faculty;
-  ItemModel(
+   IconData? icon;
+  ItemModel( 
       {this.faculty,
+      this.icon = Icons.favorite_outline,
+      required this.category,
       required this.image,
       required this.title,
       required this.subTitle,

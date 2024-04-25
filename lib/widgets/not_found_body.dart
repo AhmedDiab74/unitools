@@ -3,6 +3,7 @@ import 'package:flutter/widgets.dart';
 
 class NotFoundBody extends StatelessWidget {
   const NotFoundBody({super.key});
+  
 
   @override
   Widget build(BuildContext context) {

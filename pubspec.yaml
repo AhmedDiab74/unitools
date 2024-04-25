@@ -32,8 +32,10 @@ dependencies:
   cupertino_icons: ^1.0.6
   flutter:
     sdk: flutter
+  font_awesome_flutter: ^10.7.0
   image_picker: ^1.1.0
   persistent_bottom_nav_bar: ^5.0.2
+  provider: ^6.1.2
   svg_flutter: ^0.0.1
 
 dev_dependencies:

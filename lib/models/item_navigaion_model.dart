@@ -1,5 +1,10 @@
-class ItemNavigationModel {
- final String icon, title;
+import 'package:flutter/material.dart';
 
-  ItemNavigationModel({required this.icon, required this.title});
+class ItemNavigationModel {
+  final String icon, title;
+  IconData? photo;
+
+  ItemNavigationModel({
+    this.photo,
+    required this.icon, required this.title});
 }

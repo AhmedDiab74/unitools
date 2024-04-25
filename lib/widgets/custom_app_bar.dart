@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:svg_flutter/svg.dart';
+import 'package:unitools/views/my_favourite_view.dart';
 
 class CustomAppBar extends StatefulWidget {
   const CustomAppBar({super.key});
@@ -10,6 +11,17 @@ class CustomAppBar extends StatefulWidget {
 }
 
 class _CustomAppBarState extends State<CustomAppBar> {
+  List<String> collegesList = [
+    'medicine',
+    'Engineering',
+    'Science',
+    'Education',
+    'Commerce',
+    'Literature',
+    'Dentistry',
+    'Pharmacy',
+    'Nursing',
+  ];
   String selectedCity = "Tanta";
   @override
   Widget build(BuildContext context) {
@@ -37,7 +49,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
                           fontWeight: FontWeight.w900),
                     ),
                     padding: EdgeInsets.zero,
-                    items: <String>['Tanta', 'Menofia', 'Alexandria', 'Cairo']
+                    items: collegesList
                         .map<DropdownMenuItem<String>>((String value) {
                       return DropdownMenuItem<String>(
                         value: value,
