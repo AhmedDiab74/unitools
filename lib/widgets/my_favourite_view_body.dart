@@ -1,3 +1,5 @@
+// ignore_for_file: use_full_hex_values_for_flutter_colors
+
 import 'package:flutter/material.dart';
 import 'package:unitools/core/constant.dart';
 
@@ -47,20 +49,20 @@ class _MyFavouriteViewBodyState extends State<MyFavouriteViewBody> {
                       decoration: BoxDecoration(
                         image: DecorationImage(
                           image:
-                              AssetImage(favouriteItem[index].image), // Use favouriteItem[index]
+                              AssetImage(favouriteItem[index].image), 
                           fit: BoxFit.fill,
                         ),
                       ),
                     ),
                     Text(
-                      favouriteItem[index].title, // Use favouriteItem[index]
+                      favouriteItem[index].title, 
                       style: const TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 18,
                       ),
                     ),
                     Text(
-                      favouriteItem[index].subTitle, // Use favouriteItem[index]
+                      favouriteItem[index].subTitle,
                       style: const TextStyle(
                         fontSize: 14,
                       ),
@@ -82,7 +84,7 @@ class _MyFavouriteViewBodyState extends State<MyFavouriteViewBody> {
                                       207, 242, 240, 240),
                                 ),
                                 child: Text(
-                                  favouriteItem[index].university, // Use favouriteItem[index]
+                                  favouriteItem[index].university, 
                                   style: const TextStyle(
                                     fontSize: 14,
                                   ),
@@ -101,7 +103,7 @@ class _MyFavouriteViewBodyState extends State<MyFavouriteViewBody> {
                                       207, 242, 240, 240),
                                 ),
                                 child: Text(
-                                  favouriteItem[index].type, // Use favouriteItem[index]
+                                  favouriteItem[index].type, 
                                   style: const TextStyle(
                                     fontSize: 14,
                                   ),
@@ -142,9 +144,9 @@ class _MyFavouriteViewBodyState extends State<MyFavouriteViewBody> {
                   child: GestureDetector(
                     onTap: () {
                       setState(() {
-                        // if (favouriteItem.contains(favouriteItem[index])) {
+                        
                         favouriteItem.remove(favouriteItem[index]);
-                        // }
+                        
                       });
                     },
                     child: Icon(
@@ -162,7 +164,7 @@ class _MyFavouriteViewBodyState extends State<MyFavouriteViewBody> {
             ),
           );
            
-        }, // Convert Iterable to List */
+        }, 
       ),
     )
   

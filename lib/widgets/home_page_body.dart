@@ -11,6 +11,8 @@ import 'package:unitools/widgets/category_grid_view.dart';
 import 'package:unitools/widgets/custom_app_bar.dart';
 import 'package:unitools/widgets/search_section.dart';
 
+import '../views/home_page_view.dart';
+
 class HomePageBody extends StatefulWidget {
   const HomePageBody({super.key});
 
@@ -36,31 +38,25 @@ class _HomePageBodyState extends State<HomePageBody> {
     return Scaffold(
       bottomNavigationBar: NavigationBar(
         onDestinationSelected: (value) {
-           if (value == 0) {
-            
-          }
-           else if (value == 1) {
-            
-          }
-          else if (value == 2) {
+          if (value == 0) {
+          } else if (value == 1) {
+          } else if (value == 2) {
+            Navigator.pushNamed(context, AddItemView.routeName);
+          } else if (value == 3) {
             Navigator.pushNamed(context, MyFavouriteView.routeName)
                 .whenComplete(() => setState(() {}));
-          }
-           else if (value == 3) {
-            Navigator.pushNamed(context, AddItemView.routeName);
-          }
-           else if (value == 4) {
-          }
-           else if (value == 5) {
+          } else if (value == 4) {
+          } else if (value == 5) {
+            Navigator.pushNamed(context, HomePage.routeName);
           }
         },
         backgroundColor: Colors.transparent,
         elevation: 0,
-        selectedIndex: 5,
+        selectedIndex: 4,
         destinations: itemNavigationBar.map((item) {
           return NavigationDestination(
             icon: item.icon == ""
-                ? Icon(item.photo, color: Colors.red)
+                ? Icon(item.photo, color: Colors.blue)
                 : SvgPicture.asset(item.icon),
             label: item.title,
           );
@@ -239,26 +235,26 @@ class _HomePageBodyState extends State<HomePageBody> {
               ),
               isClickedHome
                   ? CategoryGridViewWithName(
-                    numberOfTab: 0,
-                  itemModel: items,
-                                      )
+                      numberOfTab: 0,
+                      itemModel: items,
+                    )
                   : isClickedTools
                       ? const NotFoundView()
                       : isClickedProgram
                           ? CategoryGridViewWithName(
-                            numberOfTab: 2,
-                          itemModel: items,
-                                                      )
+                              numberOfTab: 2,
+                              itemModel: items,
+                            )
                           : isClickedSection
                               ? CategoryGridViewWithName(
-                                numberOfTab: 3,
-                              itemModel: items,
-                                                              )
+                                  numberOfTab: 3,
+                                  itemModel: items,
+                                )
                               : isClickedLectures
                                   ? CategoryGridViewWithName(
-                                    numberOfTab: 4,
-                                  itemModel: items,
-                                                                      )
+                                      numberOfTab: 4,
+                                      itemModel: items,
+                                    )
                                   : const Text("")
             ],
           ),

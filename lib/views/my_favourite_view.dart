@@ -19,13 +19,13 @@ class _MyFavouriteViewState extends State<MyFavouriteView> {
     return Scaffold(
       bottomNavigationBar: NavigationBar(
         onDestinationSelected: (value) {
-          if (value == 0) {
+        if (value == 0) {
           } else if (value == 1) {
           } else if (value == 2) {
+            Navigator.pushNamed(context, AddItemView.routeName);
+          } else if (value == 3) {
             Navigator.pushNamed(context, MyFavouriteView.routeName)
                 .whenComplete(() => setState(() {}));
-          } else if (value == 3) {
-            Navigator.pushNamed(context, AddItemView.routeName);
           } else if (value == 4) {
           } else if (value == 5) {
             Navigator.pushNamed(context, HomePage.routeName);
@@ -33,11 +33,11 @@ class _MyFavouriteViewState extends State<MyFavouriteView> {
         },
         backgroundColor: Colors.transparent,
         elevation: 0,
-        selectedIndex: 2,
+        selectedIndex: 3,
         destinations: itemNavigationBar.map((item) {
           return NavigationDestination(
             icon: item.icon == ""
-                ? Icon(item.photo, color: Colors.red)
+                ? Icon(item.photo, color: Colors.blue)
                 : SvgPicture.asset(item.icon),
             label: item.title,
           );

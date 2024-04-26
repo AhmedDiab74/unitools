@@ -3,15 +3,13 @@
 import 'dart:io';
 import 'dart:typed_data';
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:unitools/views/add_data_view.dart';
 import 'package:unitools/widgets/custom_text_field.dart';
 
 class AddItemViewBody extends StatefulWidget {
-  AddItemViewBody({super.key});
+  const AddItemViewBody({super.key});
 
   @override
   State<AddItemViewBody> createState() => _AddItemViewBodyState();
