@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:svg_flutter/svg.dart';
 import 'package:unitools/core/constant.dart';
+import 'package:unitools/core/items.dart';
 import 'package:unitools/models/item_navigaion_model.dart';
 import 'package:unitools/views/add_item_view.dart';
 import 'package:unitools/views/my_favourite_view.dart';
@@ -45,8 +46,7 @@ class _HomePageBodyState extends State<HomePageBody> {
           } else if (value == 3) {
             Navigator.pushNamed(context, MyFavouriteView.routeName)
                 .whenComplete(() => setState(() {}));
-          } else if (value == 4) {
-          } else if (value == 5) {
+          }  else if (value == 4) {
             Navigator.pushNamed(context, HomePage.routeName);
           }
         },

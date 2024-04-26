@@ -19,15 +19,14 @@ class _AddItemViewState extends State<AddItemView> {
     return Scaffold(
       bottomNavigationBar: NavigationBar(
         onDestinationSelected: (value) {
-          if (value == 0) {
+         if (value == 0) {
           } else if (value == 1) {
           } else if (value == 2) {
             Navigator.pushNamed(context, AddItemView.routeName);
           } else if (value == 3) {
             Navigator.pushNamed(context, MyFavouriteView.routeName)
                 .whenComplete(() => setState(() {}));
-          } else if (value == 4) {
-          } else if (value == 5) {
+          }  else if (value == 4) {
             Navigator.pushNamed(context, HomePage.routeName);
           }
         },

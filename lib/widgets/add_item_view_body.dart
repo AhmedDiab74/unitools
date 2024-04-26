@@ -6,7 +6,8 @@ import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:unitools/views/add_data_view.dart';
-import 'package:unitools/widgets/custom_text_field.dart';
+import 'package:unitools/widgets/chooce_image_widget.dart';
+import 'package:unitools/widgets/custom_text_form_field.dart';
 
 class AddItemViewBody extends StatefulWidget {
   const AddItemViewBody({super.key});
@@ -92,74 +93,22 @@ class _AddItemViewBodyState extends State<AddItemViewBody> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
-                  width: 170,
-                  height: 90,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(6),
-                      border: Border.all(
-                        color: const Color(0xffD5D5D580),
-                      ),
-                      image: _image1 != null
-                          ? DecorationImage(
-                              image: MemoryImage(_image1!),
-                              fit: BoxFit.cover,
-                            )
-                          : null),
-                  child: GestureDetector(
-                    onTap: () {
-                      showImagePickerOption(context, 1);
-                    },
-                    child: _image1 != null
-                        ? const Text("")
-                        : const Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Icon(
-                                Icons.add,
-                                size: 50,
-                                color: Color.fromRGBO(18, 18, 18, 0.7),
-                              ),
-                              Text("إضافة صورة"),
-                            ],
-                          ),
-                  ),
+                ChooceImageWidget(
+                  title: "إضافة صورة",
+                  image: _image1,
+                  onTap: () {
+                    showImagePickerOption(context, 1);
+                  },
                 ),
                 const SizedBox(
                   width: 20,
                 ),
-                Container(
-                  width: 170,
-                  height: 90,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(6),
-                      border: Border.all(
-                        color: const Color(0xffD5D5D580),
-                      ),
-                      image: _image2 != null
-                          ? DecorationImage(
-                              image: MemoryImage(_image2!),
-                              fit: BoxFit.cover,
-                            )
-                          : null),
-                  child: GestureDetector(
-                    onTap: () {
-                      showImagePickerOption(context, 2);
-                    },
-                    child: _image2 != null
-                        ? const Text("")
-                        : const Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Icon(
-                                Icons.add,
-                                size: 50,
-                                color: Color.fromRGBO(18, 18, 18, 0.7),
-                              ),
-                              Text("إضافة صورة"),
-                            ],
-                          ),
-                  ),
+                ChooceImageWidget(
+                  title: "إضافة صورة",
+                  image: _image2,
+                  onTap: () {
+                    showImagePickerOption(context, 2);
+                  },
                 ),
               ],
             ),
@@ -169,74 +118,22 @@ class _AddItemViewBodyState extends State<AddItemViewBody> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
-                  width: 170,
-                  height: 90,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(6),
-                      border: Border.all(
-                        color: const Color(0xffD5D5D580),
-                      ),
-                      image: _image3 != null
-                          ? DecorationImage(
-                              image: MemoryImage(_image3!),
-                              fit: BoxFit.cover,
-                            )
-                          : null),
-                  child: GestureDetector(
-                    onTap: () {
-                      showImagePickerOption(context, 3);
-                    },
-                    child: _image3 != null
-                        ? const Text("")
-                        : const Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Icon(
-                                Icons.add,
-                                size: 50,
-                                color: Color.fromRGBO(18, 18, 18, 0.7),
-                              ),
-                              Text("إضافة صورة"),
-                            ],
-                          ),
-                  ),
+                ChooceImageWidget(
+                  title: "إضافة صورة",
+                  image: _image3,
+                  onTap: () {
+                    showImagePickerOption(context, 3);
+                  },
                 ),
                 const SizedBox(
                   width: 20,
                 ),
-                Container(
-                  width: 170,
-                  height: 90,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(6),
-                      border: Border.all(
-                        color: const Color(0xffD5D5D580),
-                      ),
-                      image: _image4 != null
-                          ? DecorationImage(
-                              image: MemoryImage(_image4!),
-                              fit: BoxFit.cover,
-                            )
-                          : null),
-                  child: GestureDetector(
-                    onTap: () {
-                      showImagePickerOption(context, 4);
-                    },
-                    child: _image4 != null
-                        ? const Text("")
-                        : const Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Icon(
-                                Icons.add,
-                                size: 50,
-                                color: Color.fromRGBO(18, 18, 18, 0.7),
-                              ),
-                              Text("إضافة صورة"),
-                            ],
-                          ),
-                  ),
+                ChooceImageWidget(
+                  title: "إضافة صورة",
+                  image: _image4,
+                  onTap: () {
+                    showImagePickerOption(context, 4);
+                  },
                 ),
               ],
             ),
@@ -247,8 +144,7 @@ class _AddItemViewBodyState extends State<AddItemViewBody> {
               width: double.infinity,
               height: 50,
               decoration: BoxDecoration(
-                border: Border.all(
-                    color: const Color(0xffD5D5D580)), 
+                border: Border.all(color: const Color(0xffD5D5D580)),
                 borderRadius: BorderRadius.circular(5.0),
               ),
               child: DropdownButton<String>(
