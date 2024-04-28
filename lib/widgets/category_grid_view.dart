@@ -13,20 +13,16 @@ class CategoryGridView extends StatelessWidget {
   final int numberOfTab;
   @override
   Widget build(BuildContext context) {
-    List<ItemModel> filteredItems = itemModel.where((item) {
-      if (numberOfTab == 0) {
-        return true;
-      } else if (numberOfTab == 1 && item.category == "tools") {
-        return true;
-      } else if (numberOfTab == 2 && item.category == "programs") {
-        return true;
-      } else if (numberOfTab == 3 && item.category == "section") {
-        return true;
-      } else if (numberOfTab == 4 && item.category == "lecture") {
-        return true;
+    List<ItemModel> filteredItems = [];
+    for (var item in itemModel) {
+      if (numberOfTab == 0 ||
+          (numberOfTab == 1 && item.category == "tools") ||
+          (numberOfTab == 2 && item.category == "programs") ||
+          (numberOfTab == 3 && item.category == "section") ||
+          (numberOfTab == 4 && item.category == "lecture")) {
+        filteredItems.add(item);
       }
-      return false;
-    }).toList();
+    }
 
     numberOfTab.clamp(0, 4);
 
