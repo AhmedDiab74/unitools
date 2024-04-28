@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:unitools/models/item_model.dart';
 import 'package:unitools/views/not_found_view.dart';
-import 'package:unitools/widgets/catergory_item.dart';
+import 'package:unitools/widgets/category_item.dart';
 
-class CategoryGridViewWithName extends StatelessWidget {
-  const CategoryGridViewWithName({
+class CategoryGridView extends StatelessWidget {
+  const CategoryGridView({
     super.key,
     required this.itemModel,
     required this.numberOfTab,

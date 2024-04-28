@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:unitools/core/constant.dart';
-import 'package:unitools/widgets/catergory_item.dart';
+import 'package:unitools/widgets/category_item.dart';
 
 class MyFavouriteGridView extends StatelessWidget {
   const MyFavouriteGridView({

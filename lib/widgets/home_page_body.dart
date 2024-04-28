@@ -234,27 +234,27 @@ class _HomePageBodyState extends State<HomePageBody> {
                 height: 14,
               ),
               isClickedHome
-                  ? CategoryGridViewWithName(
+                  ? CategoryGridView(
                       numberOfTab: 0,
                       itemModel: items,
                     )
                   : isClickedTools
-                      ? CategoryGridViewWithName(
+                      ? CategoryGridView(
                           numberOfTab: 1,
                           itemModel: items,
                         )
                       : isClickedProgram
-                          ? CategoryGridViewWithName(
+                          ? CategoryGridView(
                               numberOfTab: 2,
                               itemModel: items,
                             )
                           : isClickedSection
-                              ? CategoryGridViewWithName(
+                              ? CategoryGridView(
                                   numberOfTab: 3,
                                   itemModel: items,
                                 )
                               : isClickedLectures
-                                  ? CategoryGridViewWithName(
+                                  ? CategoryGridView(
                                       numberOfTab: 4,
                                       itemModel: items,
                                     )
