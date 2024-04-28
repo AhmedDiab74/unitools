@@ -46,7 +46,7 @@ class _HomePageBodyState extends State<HomePageBody> {
           } else if (value == 3) {
             Navigator.pushNamed(context, MyFavouriteView.routeName)
                 .whenComplete(() => setState(() {}));
-          }  else if (value == 4) {
+          } else if (value == 4) {
             Navigator.pushNamed(context, HomePage.routeName);
           }
         },
@@ -239,7 +239,10 @@ class _HomePageBodyState extends State<HomePageBody> {
                       itemModel: items,
                     )
                   : isClickedTools
-                      ? const NotFoundView()
+                      ? CategoryGridViewWithName(
+                          numberOfTab: 1,
+                          itemModel: items,
+                        )
                       : isClickedProgram
                           ? CategoryGridViewWithName(
                               numberOfTab: 2,
@@ -255,7 +258,7 @@ class _HomePageBodyState extends State<HomePageBody> {
                                       numberOfTab: 4,
                                       itemModel: items,
                                     )
-                                  : const Text("")
+                                  : const NotFoundView()
             ],
           ),
         ),

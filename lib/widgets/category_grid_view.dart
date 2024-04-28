@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:unitools/models/item_model.dart';
+import 'package:unitools/views/not_found_view.dart';
 import 'package:unitools/widgets/catergory_item.dart';
 
 class CategoryGridViewWithName extends StatelessWidget {
@@ -29,24 +30,26 @@ class CategoryGridViewWithName extends StatelessWidget {
 
     numberOfTab.clamp(0, 4);
 
-    return Expanded(
-      child: GridView.builder(
-        padding: EdgeInsets.zero,
-        shrinkWrap: true,
-        itemCount: filteredItems.length,
-        physics: const BouncingScrollPhysics(),
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
-          childAspectRatio: 0.79,
-          crossAxisSpacing: 10,
-          mainAxisSpacing: 12,
-        ),
-        itemBuilder: (context, index) {
-          return CategoryItem(
-            itemModel: filteredItems[index],
+    return filteredItems.isEmpty
+        ? const NotFoundView()
+        : Expanded(
+            child: GridView.builder(
+              padding: EdgeInsets.zero,
+              shrinkWrap: true,
+              itemCount: filteredItems.length,
+              physics: const BouncingScrollPhysics(),
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                childAspectRatio: 0.79,
+                crossAxisSpacing: 10,
+                mainAxisSpacing: 12,
+              ),
+              itemBuilder: (context, index) {
+                return CategoryItem(
+                  itemModel: filteredItems[index],
+                );
+              },
+            ),
           );
-        },
-      ),
-    );
   }
 }
