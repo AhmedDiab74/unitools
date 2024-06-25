@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:unitools/core/dimensions.dart';
 import 'package:unitools/models/item_model.dart';
 import 'package:unitools/views/not_found_view.dart';
 import 'package:unitools/widgets/category_item.dart';
@@ -33,11 +34,11 @@ class CategoryGridView extends StatelessWidget {
               padding: EdgeInsets.zero,
               shrinkWrap: true,
               itemCount: filteredItems.length,
-              physics: const BouncingScrollPhysics(),
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              physics: BouncingScrollPhysics(),
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
-                childAspectRatio: 0.79,
-                crossAxisSpacing: 10,
+                childAspectRatio: Dimensions.screenHeight(context) * 0.0009,
+                crossAxisSpacing: Dimensions.screenWidth(context) * .02,
                 mainAxisSpacing: 12,
               ),
               itemBuilder: (context, index) {

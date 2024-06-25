@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:unitools/core/constant.dart';
+import 'package:unitools/core/dimensions.dart';
 import 'package:unitools/models/item_model.dart';
 
 class CategoryItem extends StatefulWidget {
@@ -32,7 +33,8 @@ class _CategoryItemState extends State<CategoryItem> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              width: double.infinity,
+              // width: double.infinity,
+              width: Dimensions.screenWidth(context) * 0.5,
               height: 86,
               decoration: BoxDecoration(
                 image: DecorationImage(
@@ -45,13 +47,13 @@ class _CategoryItemState extends State<CategoryItem> {
               widget.itemModel.title,
               style: const TextStyle(
                 fontWeight: FontWeight.bold,
-                fontSize: 18,
+                fontSize: 12,
               ),
             ),
             Text(
               widget.itemModel.subTitle,
               style: const TextStyle(
-                fontSize: 14,
+                fontSize: 12,
               ),
             ),
             Padding(
@@ -62,7 +64,8 @@ class _CategoryItemState extends State<CategoryItem> {
                   Row(
                     children: [
                       Container(
-                        width: 75,
+                        // width: 75,
+                        width: Dimensions.screenWidth(context) * 0.19,
                         height: 25,
                         alignment: Alignment.center,
                         decoration: BoxDecoration(
@@ -72,7 +75,7 @@ class _CategoryItemState extends State<CategoryItem> {
                         child: Text(
                           widget.itemModel.university,
                           style: const TextStyle(
-                            fontSize: 14,
+                            fontSize: 12,
                           ),
                         ),
                       ),
@@ -90,7 +93,7 @@ class _CategoryItemState extends State<CategoryItem> {
                         child: Text(
                           widget.itemModel.type,
                           style: const TextStyle(
-                            fontSize: 14,
+                            fontSize: 12,
                           ),
                         ),
                       ),
@@ -101,7 +104,8 @@ class _CategoryItemState extends State<CategoryItem> {
                   ),
                   widget.itemModel.faculty != null
                       ? Container(
-                          width: 142,
+                          // width: 142,
+                          width: Dimensions.screenWidth(context) * 0.348,
                           height: 31,
                           alignment: Alignment.center,
                           decoration: BoxDecoration(
@@ -111,7 +115,7 @@ class _CategoryItemState extends State<CategoryItem> {
                           child: Text(
                             widget.itemModel.faculty ?? "",
                             style: const TextStyle(
-                              fontSize: 14,
+                              fontSize: 12,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -123,8 +127,10 @@ class _CategoryItemState extends State<CategoryItem> {
           ],
         ),
         Positioned(
-          top: 185,
-          left: 145,
+          // top: 185,
+          top: Dimensions.screenHeight(context) * 0.29,
+          // left: 145,
+          left: Dimensions.screenWidth(context) * 0.33,
           child: GestureDetector(
             // Step 2
             onTap: () {
