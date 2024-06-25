@@ -34,7 +34,7 @@ class CategoryGridView extends StatelessWidget {
               padding: EdgeInsets.zero,
               shrinkWrap: true,
               itemCount: filteredItems.length,
-              physics: BouncingScrollPhysics(),
+              physics: const BouncingScrollPhysics(),
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
                 childAspectRatio: Dimensions.screenHeight(context) * 0.0009,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:unitools/core/constant.dart';
+import 'package:unitools/core/dimensions.dart';
 import 'package:unitools/widgets/category_item.dart';
 
 class MyFavouriteGridView extends StatelessWidget {
@@ -14,10 +15,10 @@ class MyFavouriteGridView extends StatelessWidget {
       shrinkWrap: true,
       itemCount: favouriteItem.length,
       physics: const BouncingScrollPhysics(),
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
-        childAspectRatio: 0.79,
-        crossAxisSpacing: 10,
+        childAspectRatio: Dimensions.screenHeight(context) * 0.0009,
+        crossAxisSpacing: Dimensions.screenWidth(context) * .02,
         mainAxisSpacing: 12,
       ),
       itemBuilder: (context, index) {
